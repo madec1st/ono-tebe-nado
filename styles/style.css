@@ -128,7 +128,7 @@ body {
 .cover_description {
   position: relative;
   z-index: 2;
-  padding: 0 50px 50px 0; 
+  padding: 0 50px 50px 0;
   display: grid;
   grid-template-columns: auto 257px;
   gap: 78px;
