@@ -79,7 +79,7 @@ body {
 
 .background_settings {
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -273,7 +273,7 @@ body {
 }
 
 .footer {
-  width: 1340px;
+  max-width: 1340px;
   margin: 180px 50px 90px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
