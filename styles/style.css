@@ -9,8 +9,8 @@ body {
 }
 
 .header {
-  width: 1340px;
-  margin: 92px 49px 92px 51px;
+  max-width: 1340px;
+  margin: 92px 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -32,8 +32,13 @@ body {
   list-style: none;
 }
 
-.link_active {
+.menu_link {
   text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+.link_active .menu_link {
+  border-bottom: none;
 }
 
 .underline {
@@ -53,6 +58,7 @@ body {
 }
 
 .address {
+  max-width: 240px;
   font-size: 18px;
   line-height: 1.35;
 }
@@ -63,9 +69,9 @@ body {
 
 .cover {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   background-image: url(/images/cover.jpg);
-  width: 1440px;
+  max-width: 1440px;
   min-height: 500px;
   margin-bottom: 180px;
   
@@ -80,7 +86,7 @@ body {
 .cover_title {
   display: flex;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   color: #FFF;
   font-size: 100px;
   font-weight: 700;
@@ -93,7 +99,7 @@ body {
 
 .cover_description {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .aligned-text {
@@ -143,7 +149,7 @@ body {
 
 .bet_button {
   place-self: center end;
-  border: 1px solid #FFF;
+  border: 1px solid currentColor;
   padding: 12px 32px;
   font-size: 22px;
   text-transform: uppercase;;
@@ -152,13 +158,13 @@ body {
 .overlay {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   background: rgba(0, 0, 0, .6);
 }
 
 .lots {
-  width: 1340px;
-  margin: 180px 50px 181px;
+  max-width: 1340px;
+  margin: 180px 50px;
 }
 
 .lots_heading {
@@ -180,14 +186,14 @@ body {
 
 .card-list-item {
   width: 430px;
-  height: 450px;
+  min-height: 450px;
   color: #FFF;
   line-height: 1.2;
   flex-grow: 1;
   padding: 50px 40px;
   display: flex;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 .card-link {
@@ -200,7 +206,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 2;
 }
 
 .card_title {
@@ -233,8 +239,8 @@ body {
 }
 
 .about {
-  width: 1340px;
-  margin: 181px 50px 180px;
+  max-width: 1340px;
+  margin: 180px 50px;
   display: grid;
   grid-template-columns: 430px auto;
   gap: 0 25px;
@@ -243,7 +249,7 @@ body {
 .about_logo {
   width: 240px;
   height: 240px;
-  border-radius: 120px;
+  border-radius: 50%;
   background-color: #000;  
   padding: 63px 46px;
   grid-row: 1/4;
@@ -289,11 +295,10 @@ body {
 }
 
 .footer_social-list {
-  width: 240px;
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 48px;
   place-self: start end;
 }
 
